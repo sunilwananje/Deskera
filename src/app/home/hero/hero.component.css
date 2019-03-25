@@ -1,0 +1,97 @@
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  padding: 2.5rem;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 0.625rem;
+}
+
+.box h2 {
+  margin: 0 0 1.875rem;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.box .inputBox {
+  position: relative;
+}
+
+.box .inputBox input {
+  width: 100%;
+  padding: 0.625rem 0;
+
+  color: #fff;
+  letter-spacing: 0.062rem;
+  margin-bottom: 1.875rem;
+  border: none;
+  border-bottom: 0.065rem solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.box .inputBox label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.625rem 0;
+
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label,
+.box .inputBox input:not([value=""]) ~ label {
+  top: -1.125rem;
+  left: 0;
+  color: #03a9f4;
+
+}
+
+.box input[type="submit"] {
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: #03a9f4;
+  padding: 0.625rem 1.25rem;
+  cursor: pointer;
+  border-radius: 0.312rem;
+
+}
+
+.box input[type="submit"]:hover {
+  background-color: #1cb1f5;
+}
+
+.inputLabel {
+  width: 100%;
+  padding: 0.625rem 0;
+  color: #fff;
+  letter-spacing: 0.062rem;
+  margin-bottom: 1.875rem;
+  border: none;
+  border-bottom: 0.065rem solid #fff;
+  outline: none;
+  background: transparent;
+}
+@media only screen and (max-width: 600px) {
+
+  .box[_ngcontent-c4] {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      width: 97%;
+      padding: 2.5rem;
+      box-sizing: border-box;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 0.625rem;
+  }
+}

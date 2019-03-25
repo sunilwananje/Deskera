@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-md-8 col-center m-auto">
+    <h2>Testimonials</h2>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Carousel indicators -->
+      <!-- <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol> -->
+      <!-- Wrapper for carousel items -->
+      <div class="carousel-inner">
+        <div class="item carousel-item" [ngClass]="{'active': i == 0}"*ngFor="let testimonial of testimonials; let i = index">
+          <div class="img-box"><img src="./assets/images/10.png" alt=""></div>
+          <p class="testimonial">{{ testimonial.quote }}</p>
+          <p class="overview"><b>{{ testimonial.name }}</b>, {{ testimonial.organization_name }}</p>
+        </div>
+      </div>
+      <!-- Carousel controls -->
+      <a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">
+        <i class="fa fa-angle-left"></i>
+      </a>
+      <a class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next">
+        <i class="fa fa-angle-right"></i>
+      </a>
+    </div>
+  </div>
+</div>
+

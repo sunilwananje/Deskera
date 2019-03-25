@@ -1,0 +1,215 @@
+/* You can add global styles to this file, and also import other style files */
+*, *:after, *:before {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-font-smoothing:antialiased;
+    font-smoothing:antialiased;
+}
+body{
+   font-family: 'Libre Baskerville', serif;
+    font-size:16px;
+    color: #000000;
+}
+header{
+    display:block;
+    box-shadow:1px 1px 1px 1px #ccc;
+}
+.navbar-inverse{
+    background-color:#ffffff !important;
+    border:none !important;
+}
+a.navbar-brand{
+   padding-top:5px;
+}
+.navbar-inverse .navbar-nav>.active> a {
+    color: #d40d12 !important;
+    background-color:#ffffff !important;
+}
+.navbar-inverse .navbar-nav > a:hover{
+    color: #000000 !important;
+}
+.navbar-inverse .navbar-nav>li>a{
+    color: #000000 !important;
+    font-size:15px !important;
+}
+.navbar-nav {
+    float: right !important;
+}
+.nav>li > a {
+    position: relative;
+    display: block;
+    padding: 27px 24px 3px 22px;
+    font-size:13px;
+}
+a, a:hover {
+    text-decoration:none;
+}
+ul, ol {
+    list-style:none;
+}
+.videosection iframe{
+    display:block;
+    border:none;
+}
+.bottombar{
+    display:block;
+    background:#ffffff;
+}
+.contentarea{
+    display:block;
+    background:#fafafa;
+}
+.firstbox{
+    display:block;
+    position:relative;
+    top:-20px;
+    border:1px solid #cccccc;
+    background:#ffffff;
+    color:#000000;
+    font-size:23px;
+    text-align:center;
+    padding:60px 100px 60px 100px;
+}
+.up-title{
+    color: #000000;
+    font-size: 30px;
+}
+.upcoming-project{
+    width: 10%;
+   /* text-align: center;
+    */
+    margin-left: 45%;
+    margin-right: 45%;
+    border-top: 1px solid #d40d12;
+}
+.domainbox{
+    display:block;
+    margin-top:30px;
+    padding-bottom:50px;
+}
+.domainbox h1{
+    text-align:center;
+    color:#000000;
+    font-size:32px;
+    padding-bottom:30px;
+}
+
+.desc-div{
+    background-color:#fff;
+    padding:14px;
+    padding: 10px;
+    margin: 0px 10px;
+}
+.more-btn {
+    background: #d40d12;
+   /* width: 12%;
+    */
+    font-size: 15px;
+    text-align: center;
+    color: #ffffff;
+   /* margin-top: 50px;
+    */
+   /* margin-bottom: 10px;
+    */
+    text-decoration: none;
+    padding: 10px 25px;
+    border: 1px solid #d40d12;
+    transition: .2s ease all;
+}
+
+/* 3d slider*/
+bgimg-1, .bgimg-2, .bgimg-3 {
+    position: relative;
+    opacity: 0.65;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+
+
+  .bgimg-3 {
+    background-image: url("https://www.w3schools.com/howto/img_parallax3.jpg");
+    min-height: 400px;
+  }
+
+
+.hospital-box{
+    display:block;
+    padding:25px;
+    background:#ffffff;
+   /* box-shadow:0px 9px 6px -2px #ccc;
+    */
+    box-shadow: -2px -1px 6px -1px #ccc;
+    color:#000;
+}
+.hospital-box img{
+    text-align:center;
+    margin:auto;
+}
+.hospital-box h2{
+    font-size:21px;
+    text-transform:uppercase;
+}
+.hospital-box p{
+    font-size:15px;
+}
+.hospital-box:hover{
+    background:#d40d12;
+    color:#fff!important;
+    transition:.2s ease all;
+}
+.advisory-box{
+    display:block;
+    padding:30px;
+    background:#ffffff;
+    box-shadow: -2px -1px 6px -1px #ccc;
+    color:#000;
+    margin-top:25px;
+    border: 1px solid #f0f0f0;
+}
+.advisory-box img{
+    text-align:center;
+    margin:auto;
+}
+.advisory-box h2{
+    font-size:21px;
+    text-transform:uppercase;
+}
+.advisory-box p{
+    font-size:15px;
+}
+.advisory-box:hover{
+    background:#d40d12;
+    color:#fff!important;
+    transition:.2s ease all;
+}
+.agriculture-box{
+    display:block;
+    padding:20px;
+    background:#ffffff;
+    box-shadow:0px 9px 6px -2px #ccc;
+    color:#000;
+    margin-top:25px;
+}
+.agriculture-box img{
+    text-align:center;
+    margin:auto;
+}
+.agriculture-box h2{
+    font-size:21px;
+    text-transform:uppercase;
+}
+.agriculture-box p{
+    font-size:15px;
+}
+/* .agriculture-box:hover{
+    background:#d40d12;
+    color:#fff!important;
+    transition:.2s ease all;
+} */
+

@@ -1,0 +1,58 @@
+<div class="bgimg-3" id="heroForm">
+  <div class="box">
+
+    <form [formGroup]="heroFormGroup" (ngSubmit)="saveHeroForm()" *ngIf="!isSubmit;else heroData">
+      <div class="inputBox">
+        <input type="text" formControlName="name">
+        <label>Name</label>
+        <span *ngIf="isFormSubmited && heroFormGroup.controls.name.hasError('required')"  class="error-massage" style="color:red">
+          Name is required.
+        </span>
+      </div>
+      <div class="inputBox">
+        <input type="email" formControlName="email">
+        <label>Email</label>
+        <span *ngIf="isFormSubmited && heroFormGroup.controls.email.hasError('required')" class="error-massage" style="color:red">
+          Email is required.
+        </span>
+        <span *ngIf="isFormSubmited && heroFormGroup.controls.email.hasError('email')"  class="error-massage" style="color:red">
+          Email is not valid.
+        </span>
+      </div>
+      <div class="inputBox">
+        <input type="text" formControlName="phone" [(ngModel)]="iso2">
+        <label>Phone Number</label>
+        <span *ngIf="isFormSubmited && heroFormGroup.controls.phone.hasError('required')"  class="error-massage" style="color:red">
+          Phone number is required.
+        </span>
+      </div>
+      <div class="inputBox">
+        <input type="text" formControlName="organization_name">
+        <label>Orgnization</label>
+        <span *ngIf="isFormSubmited && heroFormGroup.controls.organization_name.hasError('required')"  class="error-massage" style="color:red">
+          Organization name is required.
+        </span>
+      </div>
+      <input type="submit" name="sign-in" value="Submit" [disabled]="heroFormGroup.valid">
+    </form>
+    <ng-template #heroData>
+      <div class="inputLabel row">
+        <label class="col-md-4">Name</label>
+       <label class="col-md-4">{{ hero.name }}</label>
+     </div>
+     <div class="inputLabel row">
+       <label class="col-md-4">Email</label>
+       <label class="col-md-4">{{ hero.email }}</label>
+     </div>
+     <div class="inputLabel row">
+
+       <label class="col-md-4">Phone Number</label>
+       <label class="col-md-4">{{ hero.phone }}</label>
+     </div>
+     <div class="inputLabel row">
+       <label class="col-md-4">Orgnization</label>
+       <label class="col-md-4">{{ hero.organization_name }}</label>
+     </div>
+    </ng-template>
+  </div>
+</div>
