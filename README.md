@@ -1,4 +1,7 @@
-#####Restapi Laravel Installation
+#### Setup
+Take clone by running `git clone https://github.com/sunilwananje/Deskera.git` to your htdocs or www or document root folder.
+
+##### Restapi Laravel Installation
 - Open restapi folder in command promot and run `composer update` command.
 - Create database in mysql server and add database_name, username and password to .env file
 - Run `php artisan db:seed` command to create migration and insert test data for features and testimonials.
