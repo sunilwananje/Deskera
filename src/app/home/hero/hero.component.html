@@ -1,6 +1,10 @@
 <div class="bgimg-3" id="heroForm">
-  <div class="box">
 
+  <div class="box">
+    <div class="alert alert-success" *ngIf="isSubmit">
+        <strong>Success!</strong> Client added.
+    </div>
+    <br>
     <form [formGroup]="heroFormGroup" (ngSubmit)="saveHeroForm()" *ngIf="!isSubmit;else heroData">
       <div class="inputBox">
         <input type="text" formControlName="name">
@@ -33,7 +37,7 @@
           Organization name is required.
         </span>
       </div>
-      <input type="submit" name="sign-in" value="Submit" [disabled]="heroFormGroup.valid">
+      <input type="submit" name="sign-in" value="Submit" [disabled]="!heroFormGroup.valid">
     </form>
     <ng-template #heroData>
       <div class="inputLabel row">
@@ -54,5 +58,6 @@
        <label class="col-md-4">{{ hero.organization_name }}</label>
      </div>
     </ng-template>
+
   </div>
 </div>
