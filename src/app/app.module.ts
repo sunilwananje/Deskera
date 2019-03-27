@@ -11,6 +11,7 @@ import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { FeaturesComponent } from './home/features/features.component';
 import { TestimonialsComponent } from './home/testimonials/testimonials.component';
+import { CountryComponent } from './home/country/country.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { TestimonialsComponent } from './home/testimonials/testimonials.componen
     TestimonialsComponent,
     HeroComponent,
     HomeComponent,
+    CountryComponent,
   ],
   imports: [
     BrowserModule,

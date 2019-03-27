@@ -25,11 +25,11 @@ $factory->define(App\Models\Testimonial::class, function (Faker $faker) {
 });
 
 $factory->define(App\Models\Feature::class, function (Faker $faker) {
-    $countries = ['RU', 'GB', 'IN', 'CN', 'US', 'CA'];
+    $countries = ['RU', 'IN', 'US', 'CA'];
     $categories = ['business', 'city', 'technics'];
     return [
-        'title' => $faker->sentence(2),
-        'sub_title' => $faker->sentence(3),
+        'title' => $faker->sentence(1),
+        'sub_title' => $faker->sentence(2),
         'description' => $faker->paragraph(3),
         'image' => $faker->image('public/storage/images', 400, 300, $categories[array_rand($categories)], false),
         'country' => $faker->randomElement($countries),

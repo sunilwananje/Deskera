@@ -1,0 +1,98 @@
+<div class="domainbox">
+  <div class="container">
+    <h2>Country Selection</h2>
+    <div class="well">
+      <form [formGroup]="countryFormGroup" (ngSubmit)="onSubmit()">
+        <div class="row">
+          <div class="col-xs-4 form-group">
+            <label for="country">Select Country:</label>
+            <select class="form-control" formControlName="name" (change)="onCountryChange($event.target.value)">
+              <option value="" selected>Select Country</option>
+              <option [value]="country.alpha2Code" *ngFor="let country of countries">{{ country.name }}</option>
+            </select>
+            <span *ngIf="isFormSubmited && countryFormGroup.controls.name.hasError('required')" class="error-massage"
+              style="color:red">
+              Country selection is required.
+            </span>
+          </div>
+          <div class="col-xs-4 form-group">
+            <label>Alpha1</label>
+            <input class="form-control" type="text" formControlName="alpha1" readonly />
+          </div>
+          <div class="col-xs-4 form-group">
+            <label>Alpha2</label>
+            <input class="form-control" type="text" formControlName="alpha2" readonly />
+          </div>
+          <div class="col-xs-4 form-group">
+            <label>Top Level Domain</label>
+            <input class="form-control" type="text" formControlName="top_level_domain" readonly />
+          </div>
+          <div class="col-xs-4 form-group">
+            <label>Calling Codes</label>
+            <input class="form-control" type="text" formControlName="calling_code" readonly />
+          </div>
+          <div class="col-xs-4 form-group">
+            <label>Capital</label>
+            <input class="form-control" type="text" formControlName="capital" readonly />
+          </div>
+          <div class="col-xs-4 form-group">
+            <label>Region</label>
+            <input class="form-control" type="text" formControlName="region" readonly />
+          </div>
+          <div class="col-xs-4 form-group">
+            <label>Currency Name</label>
+            <input class="form-control" type="text" formControlName="currency_name" readonly />
+          </div>
+          <div class="col-xs-4 form-group">
+            <label>Currency Code</label>
+            <input class="form-control" type="text" formControlName="currency_code" readonly />
+          </div>
+          <div class="col-xs-4 form-group">
+            <label>Currency Symbol</label>
+            <input class="form-control" type="text" formControlName="currency_symbol" readonly />
+          </div>
+        </div>
+        <div class="row">
+          <input type="submit" value="Save" class="btn btn-info" [disabled]="!countryFormGroup.valid">
+        </div>
+      </form>
+    </div>
+    <div class="">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Sr. No.</th>
+            <th>Name</th>
+            <th>Alpha1</th>
+            <th>Alpha2</th>
+            <th>Top Level Domain</th>
+            <th>Calling Codes</th>
+            <th>Capital</th>
+            <th>Region</th>
+            <th>Currency Code</th>
+            <th>Currency Name</th>
+            <th>Currency Symbol</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cc of customCountries; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td>{{ cc.name }}</td>
+              <td>{{ cc.alpha1 }}</td>
+              <td>{{ cc.alpha2 }}</td>
+              <td>{{ cc.top_level_domain }}</td>
+              <td>{{ cc.calling_code }}</td>
+              <td>{{ cc.capital }}</td>
+              <td>{{ cc.region }}</td>
+              <td>{{ cc.currency_code }}</td>
+              <td>{{ cc.currency_name}}</td>
+              <td>{{ cc.currency_symbol}}</td>
+            </tr>
+            <tr *ngIf="customCountries.length == 0">
+              <td colspan="10" style="text-align: center">No country found.</td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
