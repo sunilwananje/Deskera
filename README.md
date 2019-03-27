@@ -9,7 +9,7 @@ Take clone by running `git clone https://github.com/sunilwananje/Deskera.git` to
 
 ##### Angular Installation
 - Make sure your node, npm and angular cli should be in latest version
-- Open landingpage folder in command promot and run `npm install` command.
+- Open deskera folder in command promot and run `npm install` command.
 - Open `env.ts` file from `\src\app\config\env.ts` update localApi variable to your restpi path eg.
        http://localhost/deskera/restapi/public,
 - Now run `ng serve -o`
